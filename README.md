@@ -1,2 +1,2 @@
 # SAP
-A simple android audio player for playing rain sounds
+A simple web audio player for playing rain sounds
