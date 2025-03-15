@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <body style="background-color:rgb(20, 18, 20);">
+
+        <select name="Sounds" id="rain-dropdown" onchange="handleSound()">
+            <option value="sanctuary">Rain 1</option>
+            <option value="test">Rain 2</option>
+            <option value="VineBoomSoundEffect">Rain 3</option>
+            <option value="rain4">Rain 4</option>
+            
+        </select>
+
+        <button style="width: 100vw; height: 100vh; background:#201b22;" onclick="handlePlay()" type="button">Play/Pause</button> 
+
+        <audio loop id="audioSource" width="1" height="1">
+            <source src="/audio/sanctuary.mp3" type="audio/mpeg">
+        </audio>
+
+        <script> 
+        function handlePlay() { 
+            let src = document.getElementById("audioSource"); 
+            if (src.paused) {
+                src.play();
+            } else {
+                src.pause();
+            }
+        } 
+        function handleSound() { 
+            let audio = document.getElementById("audioSource"); 
+            let dropdown = document.getElementById("rain-dropdown"); 
+            let selected = dropdown.options[dropdown.selectedIndex].value; 
+            audio.src = "/audio/" + selected + ".mp3"; 
+            audio.play(); 
+        }
+        </script> 
+    </body>
+</html>
