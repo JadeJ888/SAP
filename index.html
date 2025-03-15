@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
     <body style="background-color:rgb(20, 18, 20);">
-
         <select name="Sounds" id="rain-dropdown" onchange="handleSound()">
             <option value="sanctuary">Rain 1</option>
             <option value="test">Rain 2</option>
@@ -9,8 +8,8 @@
             <option value="rain4">Rain 4</option>
             
         </select>
-
-        <button style="width: 100vw; height: 100vh; background:#201b22;" onclick="handlePlay()" type="button">Play/Pause</button> 
+        
+        <button style="width: 100vw; height: 100vh; background:#201b22; border-color: #201b22;" onclick="handlePlay()" type="button">Play/Pause</button> 
 
         <audio loop id="audioSource" width="1" height="1">
             <source src="/audio/sanctuary.mp3" type="audio/mpeg">
